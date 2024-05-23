@@ -1,0 +1,1490 @@
+V 0.0.4
+T 2024-05-23T08:16:48.079+00:00
+ID 1|ccdeb05c-18dc-11ef-b7af-001a7dda7113
+I "sys.platform=win32"
+I "python=3.10.12 | packaged by conda-forge | (main, Jun 23 2023, 22:34:57) [MSC v.1936 64 bit (AMD64)]"
+M a:"tasks.py"
+SR a|0.005
+M c:"Collect tasks"
+M d:"setup"
+M e:""
+P b:c|d|e|e|0
+ST b|0.005
+M f:"regular"
+M g:"\nCollecting tasks from: tasks.py\n"
+C f|g|0.005
+M h:"stderr"
+M i:"2024-05-23 03:16:53,536 - RPA.core.certificates - INFO - Truststore injection done, using system certificate store to validate HTTPS.\n"
+C h|i|5.456
+M j:"PASS"
+ET j|e|5.464
+M l:"scrap_lanews"
+M m:"tasks"
+M n:"c:\\Users\\lobat\\Documents\\TheFunctionary\\news_challenge\\tasks.py"
+M o:"Save in excel each news item that meets the parameters"
+P k:l|m|n|o|10
+ST k|5.464
+M p:"============================ "
+C f|p|5.464
+M q:"Running: "
+C f|q|5.464
+M r:"task_name"
+C r|l|5.464
+M s:" =============================\n"
+C f|s|5.464
+M t:"METHOD"
+SE k|t|5.464
+M v:"configure"
+M w:"robocorp.browser"
+M x:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\site-packages\\robocorp\\browser\\__init__.py"
+P u:v|w|x|e|18
+SE u|t|5.465
+M y:"kwargs"
+M z:"dict"
+M A:"{'slowmo': 500}"
+EA y|z|A
+EE t|j|5.469
+M C:"open_lanews_website"
+P B:C|m|n|e|19
+SE B|t|5.469
+M E:"goto"
+P D:E|w|x|e|212
+SE D|t|5.469
+M F:"url"
+M G:"str"
+M H:"'https://www.latimes.com/'"
+EA F|G|H
+M I:"Playwright browsers path: C:\\Users\\lobat\\AppData\\Local\\robocorp\\playwright)"
+M K:"playwright"
+M L:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\site-packages\\robocorp\\browser\\_context.py"
+P J:K|w|L|e|62
+L D|I|J|62|5.476
+P M:E|w|x|e|225
+M N:"Page"
+M O:"<Page url='https://www.latimes.com/'>"
+R M|N|O|32.794
+EE t|j|32.794
+EE t|j|34.798
+M Q:"search_phrase_and_set_parameters"
+P P:Q|m|n|e|24
+SE P|t|34.798
+M S:"page"
+P R:S|w|x|e|115
+SE R|t|34.798
+P T:S|w|x|e|134
+R T|N|O|34.798
+EE t|j|34.798
+P U:Q|m|n|e|26
+AS U|S|N|O|34.798
+M W:"Page.click"
+M X:"playwright.sync_api._generated"
+M Y:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\site-packages\\playwright\\sync_api\\_generated.py"
+P V:W|X|Y|e|9452
+SE V|t|34.798
+M Z:"selector"
+M 0:"\"span:text('Show Search')\""
+EA Z|G|0
+P 1:W|X|Y|e|9517
+M 2:"NoneType"
+M 3:"None"
+R 1|2|3|35.401
+EE t|j|35.401
+M 5:"Page.fill"
+P 4:5|X|Y|e|9690
+SE 4|t|35.402
+M 6:"\"span:text('Search Query')\""
+EA Z|G|6
+M 7:"value"
+M 8:"'liberty'"
+EA 7|G|8
+P 9:5|X|Y|e|9734
+R 9|2|3|35.923
+EE t|j|35.923
+SE V|t|35.923
+M aa:"\"span:text('Submit Search')\""
+EA Z|G|aa
+R 1|2|3|37.335
+EE t|j|37.335
+SE V|t|37.335
+M ab:"\"span:text('California')\""
+EA Z|G|ab
+R 1|2|3|37.91
+EE t|j|37.91
+M ad:"Page.select_option"
+P ac:ad|X|Y|e|10621
+SE ac|t|37.91
+M ae:"'select[name=\"s\"]'"
+EA Z|G|ae
+M af:"'1'"
+EA 7|G|af
+P ag:ad|X|Y|e|10694
+M ah:"list"
+M ai:"['1']"
+R ag|ah|ai|38.43
+EE t|j|38.43
+EE t|j|38.43
+M ak:"create_excel_file"
+P aj:ak|m|n|e|86
+SE aj|t|38.43
+M al:"months_back"
+M am:"int"
+M an:"3"
+EA al|am|an
+M ap:"Files.__init__"
+M aq:"RPA.Excel.Files"
+M ar:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\site-packages\\RPA\\Excel\\Files.py"
+P ao:ap|aq|ar|e|180
+SE ao|t|38.43
+EE t|j|38.43
+P as:ak|m|n|e|88
+M at:"excel"
+M au:"Files"
+M av:"<RPA.Excel.Files.Files object at 0x0000024837654E80>"
+AS as|at|au|av|38.43
+M ax:"Files.create_workbook"
+P aw:ax|aq|ar|e|220
+SE aw|t|38.431
+M ay:"path"
+M az:"'output/news_data.xlsx'"
+EA ay|G|az
+M aA:"fmt"
+M aB:"'xlsx'"
+EA aA|G|aB
+M aC:"sheet_name"
+M aD:"'data'"
+EA aC|G|aD
+P aE:ax|aq|ar|e|308
+M aF:"XlsxWorkbook"
+M aG:"<RPA.Excel.Files.XlsxWorkbook object at 0x00000248375B75E0>"
+R aE|aF|aG|38.432
+EE t|j|38.432
+P aH:ak|m|n|e|90
+M aI:"headers"
+M aJ:"['Title', 'Date', 'Description', 'Image filename', 'Money amount']"
+AS aH|aI|ah|aJ|38.433
+M aL:"Files.append_rows_to_worksheet"
+P aK:aL|aq|ar|e|715
+SE aK|t|38.433
+M aM:"content"
+M aN:"[['Title', 'Date', 'Description', 'Image filename', 'Money amount']]"
+EA aM|ah|aN
+M aO:"name"
+EA aO|2|3
+M aP:"header"
+M aQ:"bool"
+M aR:"False"
+EA aP|aQ|aR
+M aS:"start"
+EA aS|2|3
+M aT:"formatting_as_empty"
+EA aT|aQ|aR
+P aU:aL|aq|ar|e|786
+R aU|2|3|38.434
+EE t|j|38.434
+M aW:"extract_found_items"
+P aV:aW|m|n|e|33
+SE aV|t|38.434
+SE R|t|38.434
+M aX:"<Page url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'>"
+R T|N|aX|38.434
+EE t|j|38.434
+P aY:aW|m|n|e|35
+AS aY|S|N|aX|38.434
+P aZ:aW|m|n|e|36
+M a0:"items"
+M a1:"[]"
+AS aZ|a0|ah|a1|38.434
+M a3:"Page.locator"
+P a2:a3|X|Y|e|9747
+SE a2|t|38.434
+M a4:"'div.promo-wrapper'"
+EA Z|G|a4
+P a5:a3|X|Y|e|9796
+M a6:"Locator"
+M a7:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper'>"
+R a5|a6|a7|38.435
+EE t|j|38.435
+P a8:aW|m|n|e|37
+M a9:"li"
+AS a8|a9|a6|a7|38.435
+M bb:"for i in range(li.count())"
+P ba:bb|m|n|e|38
+M bc:"FOR"
+SE ba|bc|38.435
+M be:"Locator.count"
+P bd:be|X|Y|e|16104
+SE bd|t|38.435
+P bf:be|X|Y|e|16123
+M bg:"10"
+R bf|am|bg|38.441
+EE t|j|38.441
+M bi:"Step: for i in range(li.count())"
+P bh:bi|m|n|e|38
+M bj:"FOR_STEP"
+SE bh|bj|38.441
+M bk:"i"
+M bl:"0"
+EA bk|am|bl
+M bn:"Locator.nth"
+P bm:bn|X|Y|e|15909
+SE bm|t|38.441
+M bo:"index"
+EA bo|am|bl
+P bp:bn|X|Y|e|15929
+M bq:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=0'>"
+R bp|a6|bq|38.441
+EE t|j|38.442
+M bs:"Locator.locator"
+P br:bs|X|Y|e|15331
+SE br|t|38.442
+M bt:"selector_or_locator"
+M bu:"'h3.promo-title > a.link'"
+EA bt|G|bu
+P bv:bs|X|Y|e|15379
+M bw:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=0 >> h3.promo-title > a.link'>"
+R bv|a6|bw|38.442
+EE t|j|38.442
+M by:"Locator.text_content"
+P bx:by|X|Y|e|16995
+SE bx|t|38.442
+P bz:by|X|Y|e|17016
+M bA:"'Unconfirmed sighting of mountain lion near Griffith Park recalls L.A.\u2019s favorite big cat, P-22   '"
+R bz|G|bA|38.448
+EE t|j|38.449
+P bB:aW|m|n|e|39
+M bC:"title"
+AS bB|bC|G|bA|38.449
+SE bm|t|38.449
+EA bo|am|bl
+R bp|a6|bq|38.449
+EE t|j|38.449
+SE br|t|38.449
+M bD:"'p.promo-timestamp'"
+EA bt|G|bD
+M bE:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=0 >> p.promo-timestamp'>"
+R bv|a6|bE|38.449
+EE t|j|38.449
+SE bx|t|38.449
+M bF:"'May 19, 2024'"
+R bz|G|bF|38.454
+EE t|j|38.454
+P bG:aW|m|n|e|40
+M bH:"date"
+AS bG|bH|G|bF|38.454
+SE bm|t|38.454
+EA bo|am|bl
+R bp|a6|bq|38.455
+EE t|j|38.455
+SE br|t|38.455
+M bI:"'p.promo-description'"
+EA bt|G|bI
+M bJ:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=0 >> p.promo-description'>"
+R bv|a6|bJ|38.455
+EE t|j|38.455
+SE bx|t|38.455
+M bK:"'The National Park Service, which has reviewed video footage of the sighting, is taking the claim seriously, according to spokesperson Ana Beatriz Cholo.'"
+R bz|G|bK|38.46
+EE t|j|38.46
+P bL:aW|m|n|e|41
+M bM:"desc"
+AS bL|bM|G|bK|38.46
+SE bm|t|38.46
+EA bo|am|bl
+R bp|a6|bq|38.46
+EE t|j|38.46
+SE br|t|38.46
+M bN:"'img.image'"
+EA bt|G|bN
+M bO:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=0 >> img.image'>"
+R bv|a6|bO|38.46
+EE t|j|38.46
+M bQ:"Locator.get_attribute"
+P bP:bQ|X|Y|e|16198
+SE bP|t|38.46
+M bR:"'src'"
+EA aO|G|bR
+P bS:bQ|X|Y|e|16221
+M bT:"'https://ca-times.brightspotcdn.com/dims4/default/c4ca6e7/2147483647/strip/true/crop/1296x864+0+286/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F78%2F78%2F216f6c8c4dd99ae89138a4093986%2Fmountainlion1.jpg'"
+R bS|G|bT|38.466
+EE t|j|38.466
+P bU:aW|m|n|e|42
+M bV:"image_src"
+AS bU|bV|G|bT|38.466
+M bX:"money_value"
+P bW:bX|m|n|e|54
+SE bW|t|38.466
+M bY:"text"
+EA bY|G|bA
+P bZ:bX|m|n|e|56
+M b0:"money_regex"
+M b1:"'\\\\$\\\\d{1,3}(,\\\\d{3})*(\\\\.\\\\d{1,2})?|\\\\d+\\\\s(dollars|USD)'"
+AS bZ|b0|G|b1|38.466
+P b2:bX|m|n|e|57
+R b2|2|3|38.467
+EE t|j|38.467
+SE bW|t|38.467
+EA bY|G|bK
+AS bZ|b0|G|b1|38.467
+R b2|2|3|38.467
+EE t|j|38.467
+M b4:"else (to if money_value(title) or money_value(desc))"
+P b3:b4|m|n|e|43
+M b5:"ELSE_SCOPE"
+SE b3|b5|38.467
+P b6:aW|m|n|e|46
+M b7:"money_amount"
+AS b6|b7|aQ|aR|38.467
+EE b5|j|38.467
+EE bj|j|38.467
+SE bh|bj|38.467
+M b8:"1"
+EA bk|am|b8
+SE bm|t|38.467
+EA bo|am|b8
+M b9:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=1'>"
+R bp|a6|b9|38.467
+EE t|j|38.467
+SE br|t|38.468
+EA bt|G|bu
+M ca:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=1 >> h3.promo-title > a.link'>"
+R bv|a6|ca|38.468
+EE t|j|38.468
+SE bx|t|38.468
+M cb:"'Supporters say \u2018warmhearted\u2019 alleged Mexican Mafia member deserves bail. Wiretaps reveal threats'"
+R bz|G|cb|38.472
+EE t|j|38.472
+AS bB|bC|G|cb|38.472
+SE bm|t|38.472
+EA bo|am|b8
+R bp|a6|b9|38.472
+EE t|j|38.473
+SE br|t|38.473
+EA bt|G|bD
+M cc:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=1 >> p.promo-timestamp'>"
+R bv|a6|cc|38.473
+EE t|j|38.473
+SE bx|t|38.473
+M cd:"'May 18, 2024'"
+R bz|G|cd|38.477
+EE t|j|38.477
+AS bG|bH|G|cd|38.477
+SE bm|t|38.477
+EA bo|am|b8
+R bp|a6|b9|38.477
+EE t|j|38.477
+SE br|t|38.477
+EA bt|G|bI
+M ce:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=1 >> p.promo-description'>"
+R bv|a6|ce|38.477
+EE t|j|38.477
+SE bx|t|38.477
+M cf:"'Prosecutors say Johnny Martinez was caught on a wiretap boasting of several murders, but he still has prominent voices calling for his release, including two L.A. County probation officials. '"
+R bz|G|cf|38.482
+EE t|j|38.482
+AS bL|bM|G|cf|38.482
+SE bm|t|38.482
+EA bo|am|b8
+R bp|a6|b9|38.482
+EE t|j|38.482
+SE br|t|38.482
+EA bt|G|bN
+M cg:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=1 >> img.image'>"
+R bv|a6|cg|38.482
+EE t|j|38.482
+SE bP|t|38.483
+EA aO|G|bR
+M ch:"'https://ca-times.brightspotcdn.com/dims4/default/81c479f/2147483647/strip/true/crop/480x320+0+142/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F2e%2F9c%2F12eca9704f54ad2640eba98d796a%2Fjohnny-martinez-1.jpg'"
+R bS|G|ch|38.487
+EE t|j|38.487
+AS bU|bV|G|ch|38.487
+SE bW|t|38.487
+EA bY|G|cb
+AS bZ|b0|G|b1|38.488
+R b2|2|3|38.488
+EE t|j|38.488
+SE bW|t|38.488
+EA bY|G|cf
+AS bZ|b0|G|b1|38.488
+R b2|2|3|38.488
+EE t|j|38.488
+SE b3|b5|38.488
+AS b6|b7|aQ|aR|38.489
+EE b5|j|38.489
+EE bj|j|38.489
+SE bh|bj|38.489
+M ci:"2"
+EA bk|am|ci
+SE bm|t|38.489
+EA bo|am|ci
+M cj:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=2'>"
+R bp|a6|cj|38.489
+EE t|j|38.489
+SE br|t|38.489
+EA bt|G|bu
+M ck:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=2 >> h3.promo-title > a.link'>"
+R bv|a6|ck|38.489
+EE t|j|38.489
+SE bx|t|38.489
+M cl:"'SoCal district to pay $360K to teacher who was fired after refusing to follow transgender policies'"
+R bz|G|cl|38.493
+EE t|j|38.494
+AS bB|bC|G|cl|38.494
+SE bm|t|38.494
+EA bo|am|ci
+R bp|a6|cj|38.494
+EE t|j|38.494
+SE br|t|38.494
+EA bt|G|bD
+M cm:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=2 >> p.promo-timestamp'>"
+R bv|a6|cm|38.494
+EE t|j|38.494
+SE bx|t|38.494
+M cn:"'May 15, 2024'"
+R bz|G|cn|38.5
+EE t|j|38.5
+AS bG|bH|G|cn|38.5
+SE bm|t|38.501
+EA bo|am|ci
+R bp|a6|cj|38.501
+EE t|j|38.501
+SE br|t|38.501
+EA bt|G|bI
+M co:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=2 >> p.promo-description'>"
+R bv|a6|co|38.501
+EE t|j|38.501
+SE bx|t|38.501
+M cp:"'Jurupa Unified School District agreed to pay $360,000 to a teacher who was fired after she said her Christian beliefs prevented her from adhering to policies on gender.'"
+R bz|G|cp|38.506
+EE t|j|38.506
+AS bL|bM|G|cp|38.506
+SE bm|t|38.506
+EA bo|am|ci
+R bp|a6|cj|38.506
+EE t|j|38.506
+SE br|t|38.506
+EA bt|G|bN
+M cq:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=2 >> img.image'>"
+R bv|a6|cq|38.506
+EE t|j|38.506
+SE bP|t|38.506
+EA aO|G|bR
+M cr:"'https://ca-times.brightspotcdn.com/dims4/default/b3fba97/2147483647/strip/true/crop/4468x2979+0+250/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fbf%2F1c%2Fd39d4cc043848f1f62e2d0af05a8%2F1353454-me-conservative-parents-rights-rally-23-mjc.jpg'"
+R bS|G|cr|38.511
+EE t|j|38.511
+AS bU|bV|G|cr|38.511
+SE bW|t|38.511
+EA bY|G|cl
+AS bZ|b0|G|b1|38.511
+M cs:"Match"
+M ct:"<re.Match object; span=(22, 26), match='$360'>"
+R b2|cs|ct|38.511
+EE t|j|38.512
+M cv:"if money_value(title) or money_value(desc)"
+P cu:cv|m|n|e|43
+M cw:"IF_SCOPE"
+SE cu|cw|38.512
+P cx:aW|m|n|e|44
+M cy:"True"
+AS cx|b7|aQ|cy|38.512
+EE cw|j|38.512
+EE bj|j|38.512
+SE bh|bj|38.512
+EA bk|am|an
+SE bm|t|38.512
+EA bo|am|an
+M cz:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=3'>"
+R bp|a6|cz|38.512
+EE t|j|38.512
+SE br|t|38.512
+EA bt|G|bu
+M cA:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=3 >> h3.promo-title > a.link'>"
+R bv|a6|cA|38.512
+EE t|j|38.512
+SE bx|t|38.512
+M cB:"'$3.3 billion available for mental health beds as Newsom jump-starts Prop. 1 spending'"
+R bz|G|cB|38.517
+EE t|j|38.517
+AS bB|bC|G|cB|38.518
+SE bm|t|38.518
+EA bo|am|an
+R bp|a6|cz|38.518
+EE t|j|38.518
+SE br|t|38.518
+EA bt|G|bD
+M cC:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=3 >> p.promo-timestamp'>"
+R bv|a6|cC|38.518
+EE t|j|38.518
+SE bx|t|38.518
+M cD:"'May 14, 2024'"
+R bz|G|cD|38.522
+EE t|j|38.522
+AS bG|bH|G|cD|38.523
+SE bm|t|38.523
+EA bo|am|an
+R bp|a6|cz|38.523
+EE t|j|38.523
+SE br|t|38.523
+EA bt|G|bI
+M cE:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=3 >> p.promo-description'>"
+R bv|a6|cE|38.523
+EE t|j|38.523
+SE bx|t|38.523
+M cF:"'Newsom announced that the state will make $3.3 billion in funding available by July to begin building mental health treatment centers.'"
+R bz|G|cF|38.527
+EE t|j|38.527
+AS bL|bM|G|cF|38.527
+SE bm|t|38.527
+EA bo|am|an
+R bp|a6|cz|38.528
+EE t|j|38.528
+SE br|t|38.528
+EA bt|G|bN
+M cG:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=3 >> img.image'>"
+R bv|a6|cG|38.528
+EE t|j|38.528
+SE bP|t|38.528
+EA aO|G|bR
+M cH:"'https://ca-times.brightspotcdn.com/dims4/default/c6489f7/2147483647/strip/true/crop/5725x3817+0+90/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F9d%2F34%2Fac7bb8e9440e915aa0d708db0a2e%2F1393827-me-newsom-prop-1-mjc-003.jpg'"
+R bS|G|cH|38.532
+EE t|j|38.532
+AS bU|bV|G|cH|38.532
+SE bW|t|38.532
+EA bY|G|cB
+AS bZ|b0|G|b1|38.532
+M cI:"<re.Match object; span=(0, 4), match='$3.3'>"
+R b2|cs|cI|38.532
+EE t|j|38.533
+SE cu|cw|38.533
+AS cx|b7|aQ|cy|38.533
+EE cw|j|38.533
+EE bj|j|38.533
+SE bh|bj|38.533
+M cJ:"4"
+EA bk|am|cJ
+SE bm|t|38.533
+EA bo|am|cJ
+M cK:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=4'>"
+R bp|a6|cK|38.533
+EE t|j|38.533
+SE br|t|38.533
+EA bt|G|bu
+M cL:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=4 >> h3.promo-title > a.link'>"
+R bv|a6|cL|38.533
+EE t|j|38.533
+SE bx|t|38.533
+M cM:"'Travelers is the latest California insurer to raise rates. How to find coverage in your area'"
+R bz|G|cM|38.538
+EE t|j|38.538
+AS bB|bC|G|cM|38.538
+SE bm|t|38.538
+EA bo|am|cJ
+R bp|a6|cK|38.538
+EE t|j|38.538
+SE br|t|38.538
+EA bt|G|bD
+M cN:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=4 >> p.promo-timestamp'>"
+R bv|a6|cN|38.538
+EE t|j|38.538
+SE bx|t|38.538
+M cO:"'May 10, 2024'"
+R bz|G|cO|38.543
+EE t|j|38.543
+AS bG|bH|G|cO|38.543
+SE bm|t|38.544
+EA bo|am|cJ
+R bp|a6|cK|38.544
+EE t|j|38.544
+SE br|t|38.544
+EA bt|G|bI
+M cP:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=4 >> p.promo-description'>"
+R bv|a6|cP|38.544
+EE t|j|38.544
+SE bx|t|38.544
+M cQ:"'Travelers Insurance is the latest coverage provider that has either increased its rates or limited its policy offering, further straining the availability of policies in California. '"
+R bz|G|cQ|38.552
+EE t|j|38.552
+AS bL|bM|G|cQ|38.552
+SE bm|t|38.552
+EA bo|am|cJ
+R bp|a6|cK|38.552
+EE t|j|38.552
+SE br|t|38.553
+EA bt|G|bN
+M cR:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=4 >> img.image'>"
+R bv|a6|cR|38.553
+EE t|j|38.553
+SE bP|t|38.553
+EA aO|G|bR
+M cS:"'https://ca-times.brightspotcdn.com/dims4/default/1c12db6/2147483647/strip/true/crop/5000x3333+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fcf%2Feb%2F420faad7409ca770e17f80fac401%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1258568149'"
+R bS|G|cS|38.56
+EE t|j|38.56
+AS bU|bV|G|cS|38.56
+SE bW|t|38.56
+EA bY|G|cM
+AS bZ|b0|G|b1|38.56
+R b2|2|3|38.56
+EE t|j|38.56
+SE bW|t|38.56
+EA bY|G|cQ
+AS bZ|b0|G|b1|38.56
+R b2|2|3|38.56
+EE t|j|38.56
+SE b3|b5|38.56
+AS b6|b7|aQ|aR|38.561
+EE b5|j|38.561
+EE bj|j|38.561
+SE bh|bj|38.561
+M cT:"5"
+EA bk|am|cT
+SE bm|t|38.561
+EA bo|am|cT
+M cU:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=5'>"
+R bp|a6|cU|38.561
+EE t|j|38.561
+SE br|t|38.561
+EA bt|G|bu
+M cV:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=5 >> h3.promo-title > a.link'>"
+R bv|a6|cV|38.561
+EE t|j|38.561
+SE bx|t|38.561
+M cW:"'55 years after Reagan took on Berkeley, Newsom stays in the background amid roiling campus protests'"
+R bz|G|cW|38.566
+EE t|j|38.566
+AS bB|bC|G|cW|38.566
+SE bm|t|38.566
+EA bo|am|cT
+R bp|a6|cU|38.566
+EE t|j|38.566
+SE br|t|38.566
+EA bt|G|bD
+M cX:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=5 >> p.promo-timestamp'>"
+R bv|a6|cX|38.566
+EE t|j|38.566
+SE bx|t|38.566
+M cY:"'May 5, 2024'"
+R bz|G|cY|38.57
+EE t|j|38.571
+AS bG|bH|G|cY|38.571
+SE bm|t|38.571
+EA bo|am|cT
+R bp|a6|cU|38.571
+EE t|j|38.571
+SE br|t|38.571
+EA bt|G|bI
+M cZ:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=5 >> p.promo-description'>"
+R bv|a6|cZ|38.571
+EE t|j|38.571
+SE bx|t|38.571
+M c0:"'California\u2019s Republicans and Democrats rush to create legislation in response to college campus protests over the Israel-Hamas war.'"
+R bz|G|c0|38.577
+EE t|j|38.577
+AS bL|bM|G|c0|38.577
+SE bm|t|38.577
+EA bo|am|cT
+R bp|a6|cU|38.577
+EE t|j|38.578
+SE br|t|38.578
+EA bt|G|bN
+M c1:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=5 >> img.image'>"
+R bv|a6|c1|38.578
+EE t|j|38.578
+SE bP|t|38.578
+EA aO|G|bR
+M c2:"'https://ca-times.brightspotcdn.com/dims4/default/df681d0/2147483647/strip/true/crop/4281x2854+16+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fb4%2F71%2Fd46b31e644628a631c2e3cb5510e%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F576842038'"
+R bS|G|c2|38.582
+EE t|j|38.582
+AS bU|bV|G|c2|38.582
+SE bW|t|38.582
+EA bY|G|cW
+AS bZ|b0|G|b1|38.583
+R b2|2|3|38.583
+EE t|j|38.583
+SE bW|t|38.583
+EA bY|G|c0
+AS bZ|b0|G|b1|38.583
+R b2|2|3|38.583
+EE t|j|38.583
+SE b3|b5|38.583
+AS b6|b7|aQ|aR|38.583
+EE b5|j|38.583
+EE bj|j|38.583
+SE bh|bj|38.583
+M c3:"6"
+EA bk|am|c3
+SE bm|t|38.583
+EA bo|am|c3
+M c4:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=6'>"
+R bp|a6|c4|38.583
+EE t|j|38.583
+SE br|t|38.583
+EA bt|G|bu
+M c5:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=6 >> h3.promo-title > a.link'>"
+R bv|a6|c5|38.584
+EE t|j|38.584
+SE bx|t|38.584
+M c6:"'California leaders asked for a Supreme Court homelessness decision. Will it backfire?'"
+R bz|G|c6|38.588
+EE t|j|38.588
+AS bB|bC|G|c6|38.588
+SE bm|t|38.588
+EA bo|am|c3
+R bp|a6|c4|38.588
+EE t|j|38.588
+SE br|t|38.588
+EA bt|G|bD
+M c7:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=6 >> p.promo-timestamp'>"
+R bv|a6|c7|38.588
+EE t|j|38.588
+SE bx|t|38.588
+M c8:"'April 25, 2024'"
+R bz|G|c8|38.593
+EE t|j|38.593
+AS bG|bH|G|c8|38.593
+SE bm|t|38.593
+EA bo|am|c3
+R bp|a6|c4|38.593
+EE t|j|38.593
+SE br|t|38.593
+EA bt|G|bI
+M c9:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=6 >> p.promo-description'>"
+R bv|a6|c9|38.593
+EE t|j|38.593
+SE bx|t|38.593
+M da:"'After California\u2019s governor and others called for the Supreme Court to take up the issue of homelessness, some now fear the outcome could amplify the proliferation of encampments in L.A. and other major cities.'"
+R bz|G|da|38.597
+EE t|j|38.597
+AS bL|bM|G|da|38.597
+SE bm|t|38.597
+EA bo|am|c3
+R bp|a6|c4|38.598
+EE t|j|38.598
+SE br|t|38.598
+EA bt|G|bN
+M db:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=6 >> img.image'>"
+R bv|a6|db|38.598
+EE t|j|38.598
+SE bP|t|38.598
+EA aO|G|bR
+M dc:"'https://ca-times.brightspotcdn.com/dims4/default/8484c8c/2147483647/strip/true/crop/8256x5504+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F03%2Ffe%2F0a3190a544f3a2349913c5e7d999%2Fjohnson-v-grants-pass-housing-not-handcuffs-rally-77150.jpg'"
+R bS|G|dc|38.602
+EE t|j|38.602
+AS bU|bV|G|dc|38.602
+SE bW|t|38.602
+EA bY|G|c6
+AS bZ|b0|G|b1|38.603
+R b2|2|3|38.603
+EE t|j|38.603
+SE bW|t|38.603
+EA bY|G|da
+AS bZ|b0|G|b1|38.603
+R b2|2|3|38.603
+EE t|j|38.603
+SE b3|b5|38.603
+AS b6|b7|aQ|aR|38.603
+EE b5|j|38.603
+EE bj|j|38.603
+SE bh|bj|38.603
+M dd:"7"
+EA bk|am|dd
+SE bm|t|38.603
+EA bo|am|dd
+M de:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=7'>"
+R bp|a6|de|38.603
+EE t|j|38.603
+SE br|t|38.603
+EA bt|G|bu
+M df:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=7 >> h3.promo-title > a.link'>"
+R bv|a6|df|38.603
+EE t|j|38.603
+SE bx|t|38.603
+M dg:"'Column: Starting with his favorite cheesesteak haunt, Kobe Bryant\u2019s spirit is all over Philadelphia'"
+R bz|G|dg|38.608
+EE t|j|38.608
+AS bB|bC|G|dg|38.608
+SE bm|t|38.608
+EA bo|am|dd
+R bp|a6|de|38.608
+EE t|j|38.609
+SE br|t|38.609
+EA bt|G|bD
+M dh:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=7 >> p.promo-timestamp'>"
+R bv|a6|dh|38.609
+EE t|j|38.609
+SE bx|t|38.609
+M di:"'April 24, 2024'"
+R bz|G|di|38.613
+EE t|j|38.613
+AS bG|bH|G|di|38.613
+SE bm|t|38.613
+EA bo|am|dd
+R bp|a6|de|38.613
+EE t|j|38.614
+SE br|t|38.614
+EA bt|G|bI
+M dj:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=7 >> p.promo-description'>"
+R bv|a6|dj|38.614
+EE t|j|38.614
+SE bx|t|38.614
+M dk:"'After dropping off luggage at my hotel, I hit my first stop: Larry\u2019s Steaks, a sandwich shop in the Wynnefield neighborhood that makes Bryant\u2019s favorite Philly cheesesteak.'"
+R bz|G|dk|38.618
+EE t|j|38.618
+AS bL|bM|G|dk|38.618
+SE bm|t|38.618
+EA bo|am|dd
+R bp|a6|de|38.619
+EE t|j|38.619
+SE br|t|38.619
+EA bt|G|bN
+M dl:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=7 >> img.image'>"
+R bv|a6|dl|38.619
+EE t|j|38.619
+SE bP|t|38.619
+EA aO|G|bR
+M dm:"'https://ca-times.brightspotcdn.com/dims4/default/bb48682/2147483647/strip/true/crop/1280x853+0+57/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F28%2Fef%2F74b98b684627b075f51167acbe76%2Fkobe-and-gianna-bryant-dream-court-west-philadelphia.JPG'"
+R bS|G|dm|38.625
+EE t|j|38.625
+AS bU|bV|G|dm|38.625
+SE bW|t|38.625
+EA bY|G|dg
+AS bZ|b0|G|b1|38.625
+R b2|2|3|38.625
+EE t|j|38.625
+SE bW|t|38.625
+EA bY|G|dk
+AS bZ|b0|G|b1|38.625
+R b2|2|3|38.626
+EE t|j|38.626
+SE b3|b5|38.626
+AS b6|b7|aQ|aR|38.626
+EE b5|j|38.626
+EE bj|j|38.626
+SE bh|bj|38.626
+M dn:"8"
+EA bk|am|dn
+SE bm|t|38.626
+EA bo|am|dn
+M do:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=8'>"
+R bp|a6|do|38.626
+EE t|j|38.626
+SE br|t|38.626
+EA bt|G|bu
+M dp:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=8 >> h3.promo-title > a.link'>"
+R bv|a6|dp|38.626
+EE t|j|38.626
+SE bx|t|38.626
+M dq:"'Battles over California schools\u2019 transgender policies are raging in court. How\u2019d we get here?'"
+R bz|G|dq|38.63
+EE t|j|38.631
+AS bB|bC|G|dq|38.631
+SE bm|t|38.631
+EA bo|am|dn
+R bp|a6|do|38.631
+EE t|j|38.631
+SE br|t|38.631
+EA bt|G|bD
+M dr:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=8 >> p.promo-timestamp'>"
+R bv|a6|dr|38.631
+EE t|j|38.631
+SE bx|t|38.631
+M ds:"'April 16, 2024'"
+R bz|G|ds|38.635
+EE t|j|38.636
+AS bG|bH|G|ds|38.636
+SE bm|t|38.636
+EA bo|am|dn
+R bp|a6|do|38.636
+EE t|j|38.636
+SE br|t|38.636
+EA bt|G|bI
+M dt:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=8 >> p.promo-description'>"
+R bv|a6|dt|38.636
+EE t|j|38.636
+SE bx|t|38.636
+M du:"'It\u2019s just the latest iteration of a longtime rift over the role of public education and how much influence parents should have over that system.'"
+R bz|G|du|38.64
+EE t|j|38.64
+AS bL|bM|G|du|38.64
+SE bm|t|38.64
+EA bo|am|dn
+R bp|a6|do|38.64
+EE t|j|38.64
+SE br|t|38.64
+EA bt|G|bN
+M dv:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=8 >> img.image'>"
+R bv|a6|dv|38.641
+EE t|j|38.641
+SE bP|t|38.641
+EA aO|G|bR
+M dw:"'https://ca-times.brightspotcdn.com/dims4/default/51bb6f4/2147483647/strip/true/crop/3840x2560+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F11%2Ff5%2Fd9df66954cd3a61f9856d51761c5%2F1344937-me-orange-district-gender-id04-rc.jpg'"
+R bS|G|dw|38.645
+EE t|j|38.646
+AS bU|bV|G|dw|38.646
+SE bW|t|38.646
+EA bY|G|dq
+AS bZ|b0|G|b1|38.646
+R b2|2|3|38.646
+EE t|j|38.646
+SE bW|t|38.646
+EA bY|G|du
+AS bZ|b0|G|b1|38.646
+R b2|2|3|38.646
+EE t|j|38.646
+SE b3|b5|38.646
+AS b6|b7|aQ|aR|38.646
+EE b5|j|38.646
+EE bj|j|38.646
+SE bh|bj|38.646
+M dx:"9"
+EA bk|am|dx
+SE bm|t|38.646
+EA bo|am|dx
+M dy:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=9'>"
+R bp|a6|dy|38.646
+EE t|j|38.646
+SE br|t|38.646
+EA bt|G|bu
+M dz:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=9 >> h3.promo-title > a.link'>"
+R bv|a6|dz|38.647
+EE t|j|38.647
+SE bx|t|38.647
+M dA:"'Transgender rights vs. parent rights. California goes to court to settle school divide'"
+R bz|G|dA|38.657
+EE t|j|38.658
+AS bB|bC|G|dA|38.658
+SE bm|t|38.658
+EA bo|am|dx
+R bp|a6|dy|38.658
+EE t|j|38.658
+SE br|t|38.658
+EA bt|G|bD
+M dB:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=9 >> p.promo-timestamp'>"
+R bv|a6|dB|38.658
+EE t|j|38.658
+SE bx|t|38.658
+M dC:"'April 15, 2024'"
+R bz|G|dC|38.662
+EE t|j|38.662
+AS bG|bH|G|dC|38.663
+SE bm|t|38.663
+EA bo|am|dx
+R bp|a6|dy|38.663
+EE t|j|38.663
+SE br|t|38.663
+EA bt|G|bI
+M dD:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=9 >> p.promo-description'>"
+R bv|a6|dD|38.663
+EE t|j|38.663
+SE bx|t|38.663
+M dE:"'California courts will uphold, overturn or set ground rules for culture war battles in school districts over parent notification, book restrictions and even public records.'"
+R bz|G|dE|38.668
+EE t|j|38.668
+AS bL|bM|G|dE|38.668
+SE bm|t|38.668
+EA bo|am|dx
+R bp|a6|dy|38.668
+EE t|j|38.668
+SE br|t|38.668
+EA bt|G|bN
+M dF:"<Locator frame=<Frame name= url='https://www.latimes.com/search?q=liberty&f0=00000163-01e2-d9e5-adef-33e2984a0000&s=1'> selector='div.promo-wrapper >> nth=9 >> img.image'>"
+R bv|a6|dF|38.668
+EE t|j|38.668
+SE bP|t|38.668
+EA aO|G|bR
+M dG:"'https://ca-times.brightspotcdn.com/dims4/default/b91e202/2147483647/strip/true/crop/3840x2560+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc6%2Ff8%2Fc6da3e464d3c860ef56eac7c9191%2F1344937-me-orange-district-gender-id10-rc.jpg'"
+R bS|G|dG|38.672
+EE t|j|38.672
+AS bU|bV|G|dG|38.673
+SE bW|t|38.673
+EA bY|G|dA
+AS bZ|b0|G|b1|38.673
+R b2|2|3|38.673
+EE t|j|38.673
+SE bW|t|38.673
+EA bY|G|dE
+AS bZ|b0|G|b1|38.673
+R b2|2|3|38.673
+EE t|j|38.673
+SE b3|b5|38.673
+AS b6|b7|aQ|aR|38.673
+EE b5|j|38.673
+EE bj|j|38.673
+EE bc|j|38.673
+P dH:aW|m|n|e|52
+M dI:"[('Unconfirmed sighting of mountain lion near Griffith Park recalls L.A.\u2019s favorite big cat, P-22   ', 'May 19, 2024', 'The National Park Service, which has reviewed video footage of the sighting, is taking the claim seriously, according to spokesperson Ana Beatriz Cholo.', 'https://ca-times.brightspotcdn.com/dims4/default/c4ca6e7/2147483647/strip/true/crop/1296x864+0+286/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F78%2F78%2F216f6c8c4dd99ae89138a4093986%2Fmountainlion1.jpg', False), ('Supporters say \u2018warmhearted\u2019 alleged Mexican Mafia member deserves bail. Wiretaps reveal threats', 'May 18, 2024', 'Prosecutors say Johnny Martinez was caught on a wiretap boasting of several murders, but he still has prominent voices calling for his release, including two L.A. County probation officials. ', 'https://ca-times.brightspotcdn.com/dims4/default/81c479f/2147483647/strip/true/crop/480x320+0+142/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F2e%2F9c%2F12eca9704f54ad2640eba98d796a%2Fjohnny-martinez-1.jpg', False), ('SoCal district to pay $360K to teacher who was fired after refusing to follow transgender policies', 'May 15, 2024', 'Jurupa Unified School District agreed to pay $360,000 to a teacher who was fired after she said her Christian beliefs prevented her from adhering to policies on gender.', 'https://ca-times.brightspotcdn.com/dims4/default/b3fba97/2147483647/strip/true/crop/4468x2979+0+250/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fbf%2F1c%2Fd39d4cc043848f1f62e2d0af05a8%2F1353454-me-conservative-parents-rights-rally-23-mjc.jpg', True), ('$3.3 billion available for mental health beds as Newsom jump-starts Prop. 1 spending', 'May 14, 2024', 'Newsom announced that the state will make $3.3 billion in funding available by July to begin building mental health treatment centers.', 'https://ca-times.brightspotcdn.com/dims4/default/c6489f7/2147483647/strip/true/crop/5725x3817+0+90/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F9d%2F34%2Fac7bb8e9440e915aa0d708db0a2e%2F1393827-me-newsom-prop-1-mjc-003.jpg', True), ('Travelers is the latest California insurer to raise rates. How to find coverage in your area', 'May 10, 2024', 'Travelers Insurance is the latest coverage provider that has either increased its rates or limited its policy offering, further straining the availability of policies in California. ', 'https://ca-times.brightspotcdn.com/dims4/default/1c12db6/2147483647/strip/true/crop/5000x3333+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fcf%2Feb%2F420faad7409ca770e17f80fac401%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1258568149', False), ('55 years after Reagan took on Berkeley, Newsom stays in the background amid roiling campus protests', 'May 5, 2024', 'California\u2019s Republicans and Democrats rush to create legislation in response to college campus protests over the Israel-Hamas war.', 'https://ca-times.brightspotcdn.com/dims4/default/df681d0/2147483647/strip/true/crop/4281x2854+16+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fb4%2F71%2Fd46b31e644628a631c2e3cb5510e%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F576842038', False), ('California leaders asked for a Supreme Court homelessness decision. Will it backfire?', 'April 25, 2024', 'After California\u2019s governor and others called for the Supreme Court to take up the issue of homelessness, some now fear the outcome could amplify the proliferation of encampments in L.A. and other major cities.', 'https://ca-times.brightspotcdn.com/dims4/default/8484c8c/2147483647/strip/true/crop/8256x5504+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F03%2Ffe%2F0a3190a544f3a2349913c5e7d999%2Fjohnson-v-grants-pass-housing-not-handcuffs-rally-77150.jpg', False), ('Column: Starting with his favorite cheesesteak haunt, Kobe Bryant\u2019s spirit is all over Philadelphia', 'April 24, 2024', 'After dropping off luggage at my hotel, I hit my first stop: Larry\u2019s Steaks, a sandwich shop in the Wynnefield neighborhood that makes Bryant\u2019s favorite Philly cheesesteak.', 'https://ca-times.brightspotcdn.com/dims4/default/bb48682/2147483647/strip/true/crop/1280x853+0+57/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F28%2Fef%2F74b98b684627b075f51167acbe76%2Fkobe-and-gianna-bryant-dream-court-west-philadelphia.JPG', False), ('Battles over California schools\u2019 transgender policies are raging in court. How\u2019d we get here?', 'April 16, 2024', 'It\u2019s just the latest iteration of a longtime rift over the role of public education and how much influence parents should have over that system.', 'https://ca-times.brightspotcdn.com/dims4/default/51bb6f4/2147483647/strip/true/crop/3840x2560+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F11%2Ff5%2Fd9df66954cd3a61f9856d51761c5%2F1344937-me-orange-district-gender-id04-rc.jpg', False), ('Transgender rights vs. parent rights. California goes to court to settle school divide', 'April 15, 2024', 'California courts will uphold, overturn or set ground rules for culture war battles in school districts over parent notification, book restrictions and even public records.', 'https://ca-times.brightspotcdn.com/dims4/default/b91e202/2147483647/strip/true/crop/3840x2560+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc6%2Ff8%2Fc6da3e464d3c860ef56eac7c9191%2F1344937-me-orange-district-gender-id10-rc.jpg', False)]"
+R dH|ah|dI|38.673
+EE t|j|38.673
+P dJ:ak|m|n|e|97
+AS dJ|a0|ah|dI|38.673
+M dL:"filter_items_by_date"
+P dK:dL|m|n|e|59
+SE dK|t|38.674
+EA a0|ah|dI
+EA al|am|an
+P dM:dL|m|n|e|64
+M dN:"current_date"
+M dO:"datetime"
+M dP:"datetime.datetime(2024, 5, 23, 3, 17, 26, 753524)"
+AS dM|dN|dO|dP|38.674
+P dQ:dL|m|n|e|65
+M dR:"filtered_items"
+AS dQ|dR|ah|a1|38.674
+M dT:"for item in items"
+P dS:dT|m|n|e|67
+SE dS|bc|38.674
+M dV:"Step: for item in items"
+P dU:dV|m|n|e|67
+SE dU|bj|38.674
+M dW:"item"
+M dX:"tuple"
+M dY:"('Unconfirmed sighting of mountain lion near Griffith Park recalls L.A.\u2019s favorite big cat, P-22   ', 'May 19, 2024', 'The National Park Service, which has reviewed video footage of the sighting, is taking the claim seriously, according to spokesperson Ana Beatriz Cholo.', 'https://ca-times.brightspotcdn.com/dims4/default/c4ca6e7/2147483647/strip/true/crop/1296x864+0+286/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F78%2F78%2F216f6c8c4dd99ae89138a4093986%2Fmountainlion1.jpg', False)"
+EA dW|dX|dY
+P dZ:dL|m|n|e|69
+M d0:"date_formats"
+M d1:"['%b %d, %Y', '%B %d, %Y', '%b. %d, %Y']"
+AS dZ|d0|ah|d1|38.674
+M d3:"for fmt in date_formats"
+P d2:d3|m|n|e|70
+SE d2|bc|38.674
+M d5:"Step: for fmt in date_formats"
+P d4:d5|m|n|e|70
+SE d4|bj|38.674
+M d6:"'%b %d, %Y'"
+EA aA|G|d6
+P d7:dL|m|n|e|72
+M d8:"news_date"
+M d9:"datetime.datetime(2024, 5, 19, 0, 0)"
+AS d7|d8|dO|d9|38.683
+P ea:dL|m|n|e|73
+M eb:"BREAK"
+SE ea|eb|38.683
+EE bj|j|38.683
+EE bc|j|38.683
+P ec:dL|m|n|e|76
+M ed:"delta_months"
+AS ec|ed|am|bl|38.683
+M ef:"if delta_months <= months_back"
+P ee:ef|m|n|e|81
+SE ee|cw|38.683
+EA ed|am|bl
+EA al|am|an
+EE cw|j|38.683
+EE bj|j|38.683
+SE dU|bj|38.683
+M eg:"('Supporters say \u2018warmhearted\u2019 alleged Mexican Mafia member deserves bail. Wiretaps reveal threats', 'May 18, 2024', 'Prosecutors say Johnny Martinez was caught on a wiretap boasting of several murders, but he still has prominent voices calling for his release, including two L.A. County probation officials. ', 'https://ca-times.brightspotcdn.com/dims4/default/81c479f/2147483647/strip/true/crop/480x320+0+142/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F2e%2F9c%2F12eca9704f54ad2640eba98d796a%2Fjohnny-martinez-1.jpg', False)"
+EA dW|dX|eg
+AS dZ|d0|ah|d1|38.683
+SE d2|bc|38.683
+SE d4|bj|38.683
+EA aA|G|d6
+M eh:"datetime.datetime(2024, 5, 18, 0, 0)"
+AS d7|d8|dO|eh|38.683
+SE ea|eb|38.683
+EE bj|j|38.683
+EE bc|j|38.683
+AS ec|ed|am|bl|38.683
+SE ee|cw|38.684
+EA ed|am|bl
+EA al|am|an
+EE cw|j|38.684
+EE bj|j|38.684
+SE dU|bj|38.684
+M ei:"('SoCal district to pay $360K to teacher who was fired after refusing to follow transgender policies', 'May 15, 2024', 'Jurupa Unified School District agreed to pay $360,000 to a teacher who was fired after she said her Christian beliefs prevented her from adhering to policies on gender.', 'https://ca-times.brightspotcdn.com/dims4/default/b3fba97/2147483647/strip/true/crop/4468x2979+0+250/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fbf%2F1c%2Fd39d4cc043848f1f62e2d0af05a8%2F1353454-me-conservative-parents-rights-rally-23-mjc.jpg', True)"
+EA dW|dX|ei
+AS dZ|d0|ah|d1|38.684
+SE d2|bc|38.684
+SE d4|bj|38.684
+EA aA|G|d6
+M ej:"datetime.datetime(2024, 5, 15, 0, 0)"
+AS d7|d8|dO|ej|38.684
+SE ea|eb|38.684
+EE bj|j|38.684
+EE bc|j|38.684
+AS ec|ed|am|bl|38.684
+SE ee|cw|38.684
+EA ed|am|bl
+EA al|am|an
+EE cw|j|38.684
+EE bj|j|38.684
+SE dU|bj|38.684
+M ek:"('$3.3 billion available for mental health beds as Newsom jump-starts Prop. 1 spending', 'May 14, 2024', 'Newsom announced that the state will make $3.3 billion in funding available by July to begin building mental health treatment centers.', 'https://ca-times.brightspotcdn.com/dims4/default/c6489f7/2147483647/strip/true/crop/5725x3817+0+90/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F9d%2F34%2Fac7bb8e9440e915aa0d708db0a2e%2F1393827-me-newsom-prop-1-mjc-003.jpg', True)"
+EA dW|dX|ek
+AS dZ|d0|ah|d1|38.684
+SE d2|bc|38.684
+SE d4|bj|38.685
+EA aA|G|d6
+M el:"datetime.datetime(2024, 5, 14, 0, 0)"
+AS d7|d8|dO|el|38.685
+SE ea|eb|38.685
+EE bj|j|38.685
+EE bc|j|38.685
+AS ec|ed|am|bl|38.685
+SE ee|cw|38.685
+EA ed|am|bl
+EA al|am|an
+EE cw|j|38.685
+EE bj|j|38.685
+SE dU|bj|38.685
+M em:"('Travelers is the latest California insurer to raise rates. How to find coverage in your area', 'May 10, 2024', 'Travelers Insurance is the latest coverage provider that has either increased its rates or limited its policy offering, further straining the availability of policies in California. ', 'https://ca-times.brightspotcdn.com/dims4/default/1c12db6/2147483647/strip/true/crop/5000x3333+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fcf%2Feb%2F420faad7409ca770e17f80fac401%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F1258568149', False)"
+EA dW|dX|em
+AS dZ|d0|ah|d1|38.685
+SE d2|bc|38.685
+SE d4|bj|38.685
+EA aA|G|d6
+M en:"datetime.datetime(2024, 5, 10, 0, 0)"
+AS d7|d8|dO|en|38.685
+SE ea|eb|38.685
+EE bj|j|38.685
+EE bc|j|38.685
+AS ec|ed|am|bl|38.685
+SE ee|cw|38.685
+EA ed|am|bl
+EA al|am|an
+EE cw|j|38.685
+EE bj|j|38.685
+SE dU|bj|38.685
+M eo:"('55 years after Reagan took on Berkeley, Newsom stays in the background amid roiling campus protests', 'May 5, 2024', 'California\u2019s Republicans and Democrats rush to create legislation in response to college campus protests over the Israel-Hamas war.', 'https://ca-times.brightspotcdn.com/dims4/default/df681d0/2147483647/strip/true/crop/4281x2854+16+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fb4%2F71%2Fd46b31e644628a631c2e3cb5510e%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F576842038', False)"
+EA dW|dX|eo
+AS dZ|d0|ah|d1|38.686
+SE d2|bc|38.686
+SE d4|bj|38.686
+EA aA|G|d6
+M ep:"datetime.datetime(2024, 5, 5, 0, 0)"
+AS d7|d8|dO|ep|38.686
+SE ea|eb|38.686
+EE bj|j|38.686
+EE bc|j|38.686
+AS ec|ed|am|bl|38.686
+SE ee|cw|38.686
+EA ed|am|bl
+EA al|am|an
+EE cw|j|38.686
+EE bj|j|38.686
+SE dU|bj|38.686
+M eq:"('California leaders asked for a Supreme Court homelessness decision. Will it backfire?', 'April 25, 2024', 'After California\u2019s governor and others called for the Supreme Court to take up the issue of homelessness, some now fear the outcome could amplify the proliferation of encampments in L.A. and other major cities.', 'https://ca-times.brightspotcdn.com/dims4/default/8484c8c/2147483647/strip/true/crop/8256x5504+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F03%2Ffe%2F0a3190a544f3a2349913c5e7d999%2Fjohnson-v-grants-pass-housing-not-handcuffs-rally-77150.jpg', False)"
+EA dW|dX|eq
+AS dZ|d0|ah|d1|38.686
+SE d2|bc|38.686
+SE d4|bj|38.686
+EA aA|G|d6
+P er:dL|m|n|e|75
+M es:"CONTINUE"
+SE er|es|38.686
+EE bj|j|38.686
+SE d4|bj|38.686
+M et:"'%B %d, %Y'"
+EA aA|G|et
+M eu:"datetime.datetime(2024, 4, 25, 0, 0)"
+AS d7|d8|dO|eu|38.687
+SE ea|eb|38.687
+EE bj|j|38.687
+EE bc|j|38.687
+AS ec|ed|am|b8|38.687
+SE ee|cw|38.687
+EA ed|am|b8
+EA al|am|an
+EE cw|j|38.687
+EE bj|j|38.687
+SE dU|bj|38.687
+M ev:"('Column: Starting with his favorite cheesesteak haunt, Kobe Bryant\u2019s spirit is all over Philadelphia', 'April 24, 2024', 'After dropping off luggage at my hotel, I hit my first stop: Larry\u2019s Steaks, a sandwich shop in the Wynnefield neighborhood that makes Bryant\u2019s favorite Philly cheesesteak.', 'https://ca-times.brightspotcdn.com/dims4/default/bb48682/2147483647/strip/true/crop/1280x853+0+57/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F28%2Fef%2F74b98b684627b075f51167acbe76%2Fkobe-and-gianna-bryant-dream-court-west-philadelphia.JPG', False)"
+EA dW|dX|ev
+AS dZ|d0|ah|d1|38.687
+SE d2|bc|38.687
+SE d4|bj|38.687
+EA aA|G|d6
+SE er|es|38.687
+EE bj|j|38.687
+SE d4|bj|38.687
+EA aA|G|et
+M ew:"datetime.datetime(2024, 4, 24, 0, 0)"
+AS d7|d8|dO|ew|38.687
+SE ea|eb|38.687
+EE bj|j|38.687
+EE bc|j|38.687
+AS ec|ed|am|b8|38.688
+SE ee|cw|38.688
+EA ed|am|b8
+EA al|am|an
+EE cw|j|38.688
+EE bj|j|38.688
+SE dU|bj|38.688
+M ex:"('Battles over California schools\u2019 transgender policies are raging in court. How\u2019d we get here?', 'April 16, 2024', 'It\u2019s just the latest iteration of a longtime rift over the role of public education and how much influence parents should have over that system.', 'https://ca-times.brightspotcdn.com/dims4/default/51bb6f4/2147483647/strip/true/crop/3840x2560+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F11%2Ff5%2Fd9df66954cd3a61f9856d51761c5%2F1344937-me-orange-district-gender-id04-rc.jpg', False)"
+EA dW|dX|ex
+AS dZ|d0|ah|d1|38.688
+SE d2|bc|38.688
+SE d4|bj|38.688
+EA aA|G|d6
+SE er|es|38.688
+EE bj|j|38.688
+SE d4|bj|38.688
+EA aA|G|et
+M ey:"datetime.datetime(2024, 4, 16, 0, 0)"
+AS d7|d8|dO|ey|38.688
+SE ea|eb|38.688
+EE bj|j|38.688
+EE bc|j|38.688
+AS ec|ed|am|b8|38.688
+SE ee|cw|38.688
+EA ed|am|b8
+EA al|am|an
+EE cw|j|38.688
+EE bj|j|38.688
+SE dU|bj|38.688
+M ez:"('Transgender rights vs. parent rights. California goes to court to settle school divide', 'April 15, 2024', 'California courts will uphold, overturn or set ground rules for culture war battles in school districts over parent notification, book restrictions and even public records.', 'https://ca-times.brightspotcdn.com/dims4/default/b91e202/2147483647/strip/true/crop/3840x2560+0+0/resize/840x560!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2Fc6%2Ff8%2Fc6da3e464d3c860ef56eac7c9191%2F1344937-me-orange-district-gender-id10-rc.jpg', False)"
+EA dW|dX|ez
+AS dZ|d0|ah|d1|38.688
+SE d2|bc|38.688
+SE d4|bj|38.688
+EA aA|G|d6
+SE er|es|38.688
+EE bj|j|38.689
+SE d4|bj|38.689
+EA aA|G|et
+M eA:"datetime.datetime(2024, 4, 15, 0, 0)"
+AS d7|d8|dO|eA|38.689
+SE ea|eb|38.689
+EE bj|j|38.689
+EE bc|j|38.689
+AS ec|ed|am|b8|38.689
+SE ee|cw|38.689
+EA ed|am|b8
+EA al|am|an
+EE cw|j|38.689
+EE bj|j|38.689
+EE bc|j|38.689
+P eB:dL|m|n|e|84
+R eB|ah|dI|38.689
+EE t|j|38.689
+P eC:ak|m|n|e|98
+AS eC|dR|ah|dI|38.689
+SE aK|t|40.698
+EA aM|ah|dI
+EA aO|2|3
+EA aP|aQ|aR
+EA aS|2|3
+EA aT|aQ|aR
+R aU|2|3|40.703
+EE t|j|40.703
+M eE:"Files.save_workbook"
+P eD:eE|aq|ar|e|380
+SE eD|t|40.703
+EA ay|2|3
+P eF:eE|aq|ar|e|438
+R eF|2|3|40.72
+EE t|j|40.72
+M eH:"Files.close_workbook"
+P eG:eH|aq|ar|e|359
+SE eG|t|40.72
+EE t|j|40.72
+EE t|j|40.72
+EE t|j|40.721
+C r|l|40.788
+M eI:" status: "
+C f|eI|40.788
+M eJ:"PASS\n"
+C f|eJ|40.788
+M eK:"================================================================================\n"
+C f|eK|40.789
+ET j|e|40.789
+M eM:"Teardown tasks"
+M eN:"teardown"
+P eL:eM|eN|e|e|0
+ST eL|40.789
+M eO:"Process snapshot"
+SPS eO|40.916
+M eP:"System information:\nMemory: Total: 47.8 G, Available: 32.8 G, Used: 31.3 %\nCPUs: 12"
+P eQ:e|e|e|e|0
+L I|eP|eQ|0|41.041
+M eR:"Current Process: python.exe (pid: 13732, status: running)\nCommand Line: C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\python.exe -m robocorp.tasks run tasks.py\nStarted: 03:16:47\nParent pid: 8260\nResident Set Size: 89.0 M\nVirtual Memory Size: 76.8 M"
+L I|eR|eQ|0|41.053
+M eS:"OutputToPortThread|Thread ID: 20024 (daemon)"
+STD eS|41.053
+M eT:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\threading.py"
+M eU:"_bootstrap"
+M eV:"self._bootstrap_inner()"
+TBE eT|973|eU|eV
+M eW:"self"
+M eX:"Thread"
+M eY:"<Thread(OutputToPortThread, started daemon 20024)>"
+TBV eW|eX|eY
+M eZ:"_bootstrap_inner"
+M e0:"self.run()"
+TBE eT|1016|eZ|e0
+TBV eW|eX|eY
+M e1:"run"
+M e2:"self._target(*self._args, **self._kwargs)"
+TBE eT|953|e1|e2
+TBV eW|eX|eY
+M e3:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\site-packages\\robocorp\\tasks\\_log_output_setup.py"
+M e4:"write_in_thread"
+M e5:"msg = q.get()"
+TBE e3|73|e4|e5
+M e6:"msg"
+M e7:"'ST eL|40.784\\n'"
+TBV e6|G|e7
+M e8:"client_socket"
+M e9:"socket"
+M fa:"<socket.socket fd=748, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 58854), raddr=('127.0.0.1', 49776)>"
+TBV e8|e9|fa
+M fb:"log"
+M fc:"module"
+M fd:"<module 'robocorp.log' from 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\__init__.py'>"
+TBV fb|fc|fd
+M fe:"port_in_env"
+M ff:"'49776'"
+TBV fe|G|ff
+M fg:"q"
+M fh:"Queue"
+M fi:"<queue.Queue object at 0x0000024833C705E0>"
+TBV fg|fh|fi
+M fj:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\queue.py"
+M fk:"get"
+M fl:"self.not_empty.wait()"
+TBE fj|171|fk|fl
+TBV eW|fh|fi
+M fm:"block"
+TBV fm|aQ|cy
+M fn:"timeout"
+TBV fn|2|3
+M fo:"wait"
+M fp:"waiter.acquire()"
+TBE eT|320|fo|fp
+M fq:"Condition"
+M fr:"<Condition(<unlocked _thread.lock object at 0x0000024832693B00>, 1)>"
+TBV eW|fq|fr
+TBV fn|2|3
+M fs:"waiter"
+M ft:"lock"
+M fu:"<locked _thread.lock object at 0x00000248370FDE00>"
+TBV fs|ft|fu
+M fv:"saved_state"
+TBV fv|2|3
+M fw:"gotit"
+TBV fw|aQ|aR
+ETD 41.054
+M fx:"MainThread|Thread ID: 3692 (non daemon)"
+STD fx|41.054
+M fy:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\site-packages\\robocorp\\log\\__init__.py"
+M fz:"process_snapshot"
+M fA:"robo_logger.process_snapshot()"
+TBE fy|270|fz|fA
+M fB:"logger_instances"
+M fC:"{<robocorp.log._robo_logger._RoboLogger object at 0x0000024833391540>: 1, <robocorp.log._robo_logger._RoboLogger object at 0x0000024833C70610>: 1}"
+TBV fB|z|fC
+M fD:"robo_logger"
+M fE:"_RoboLogger"
+M fF:"<robocorp.log._robo_logger._RoboLogger object at 0x0000024833391540>"
+TBV fD|fE|fF
+M fG:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\site-packages\\robocorp\\log\\_robo_logger.py"
+M fH:"new_func"
+M fI:"return func(self, *args, **kwargs)"
+TBE fG|20|fH|fI
+TBV eW|fE|fF
+M fJ:"args"
+M fK:"()"
+TBV fJ|dX|fK
+M fL:"{}"
+TBV y|z|fL
+M fM:"func"
+M fN:"function"
+M fO:"<function _RoboLogger.process_snapshot at 0x000002483573E200>"
+TBV fM|fN|fO
+M fP:"return self._robot_output_impl.process_snapshot(hide_vars)"
+TBE fG|416|fz|fP
+TBV eW|fE|fF
+M fQ:"hide_vars"
+TBV fQ|aQ|aR
+M fR:"C:\\ProgramData\\robocorp\\ht\\5cb70dc_b1f3c24_1c0bc041\\lib\\site-packages\\robocorp\\log\\_robo_output_impl.py"
+M fS:"self._dump_threads(hide_vars)"
+TBE fR|748|fz|fS
+TBV fQ|aQ|aR
+TBV fb|fc|fd
+M fT:"entry_id"
+M fU:"'ps_0'"
+TBV fT|G|fU
+M fV:"entry_type"
+M fW:"'process_snapshot'"
+TBV fV|G|fW
+M fX:"psutil"
+M fY:"<module 'psutil' from 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\psutil\\\\__init__.py'>"
+TBV fX|fc|fY
+M fZ:"AccessDenied"
+M f0:"type"
+M f1:"<class 'psutil.AccessDenied'>"
+TBV fZ|f0|f1
+M f2:"NoSuchProcess"
+M f3:"<class 'psutil.NoSuchProcess'>"
+TBV f2|f0|f3
+M f4:"ZombieProcess"
+M f5:"<class 'psutil.ZombieProcess'>"
+TBV f4|f0|f5
+M f6:"curr_process"
+M f7:"Process"
+M f8:"psutil.Process(pid=13732, name='python.exe', status='running', started='03:16:47')"
+TBV f6|f7|f8
+M f9:"log_info"
+M ga:"<function _RoboOutputImpl.process_snapshot.<locals>.log_info at 0x0000024839933640>"
+TBV f9|fN|ga
+M gb:"memory_info"
+M gc:"'Total: 47.8 G, Available: 32.8 G, Used: 31.3 %'"
+TBV gb|G|gc
+M gd:"child_i"
+TBV gd|am|bl
+M ge:"child"
+TBV ge|f7|f8
+M gf:"'python.exe'"
+TBV aO|G|gf
+M gg:"status"
+M gh:"'running'"
+TBV gg|G|gh
+M gi:"create_time"
+M gj:"'03:16:47'"
+TBV gi|G|gj
+M gk:"ppid"
+M gl:"'8260'"
+TBV gk|G|gl
+M gm:"cmdline"
+M gn:"'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\python.exe -m robocorp.tasks run tasks.py'"
+TBV gm|G|gn
+M go:"rss"
+M gp:"'89.0 M'"
+TBV go|G|gp
+M gq:"vms"
+M gr:"'76.8 M'"
+TBV gq|G|gr
+M gs:"proc_memory_info"
+M gt:"pmem"
+M gu:"pmem(rss=93351936, vms=80490496, num_page_faults=109556, peak_wset=99270656, wset=93351936, peak_paged_pool=207776, paged_pool=207600, peak_nonpaged_pool=30056, nonpaged_pool=28064, pagefile=80490496, peak_pagefile=91611136, private=80490496)"
+TBV gs|gt|gu
+M gv:"message"
+M gw:"'Current Process: python.exe (pid: 13732, status: running)\\nCommand Line: C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\python.exe -m robocorp.tasks run tasks.py\\nStarted: 03:16:47\\nParent pid: 8260\\nResident Set Size: 89.0 M\\nVirtual Memory Size: 76.8 M'"
+TBV gv|G|gw
+M gx:"_RoboOutputImpl"
+M gy:"<robocorp.log._robo_output_impl._RoboOutputImpl object at 0x0000024832BBA770>"
+TBV eW|gx|gy
+M gz:"_dump_threads"
+M gA:"stack.append((f, f.f_lineno))"
+TBE fR|769|gz|gA
+TBV eW|gx|gy
+TBV fQ|aQ|aR
+M gB:"thread_id"
+M gC:"3692"
+TBV gB|am|gC
+M gD:"frame"
+M gE:"<frame at 0x0000024835B61F40, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 773, code _dump_threads>"
+TBV gD|gD|gE
+M gF:"thread"
+M gG:"_MainThread"
+M gH:"<_MainThread(MainThread, started 3692)>"
+TBV gF|gG|gH
+M gI:"'MainThread|Thread ID: 3692 (non daemon)'"
+TBV bC|G|gI
+M gJ:"f"
+M gK:"<frame at 0x00000248330063D0, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\robocorp\\\\tasks\\\\_commands.py', line 480, code run>"
+TBV gJ|gD|gK
+M gL:"stack"
+M gM:"[(<frame at 0x0000024839D1ED90, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\__init__.py', line 270, code process_snapshot>, 270), (<frame at 0x0000024835481640, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_logger.py', line 20, code new_func>, 20), (<frame at 0x0000024839D35BE0, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_logger.py', line 416, code process_snapshot>, 416), (<frame at 0x00000248339EB340, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 748, code process_snapshot>, 748), (<frame at 0x0000024835B61F40, file 'C:\\\\ProgramData\\\\robocorp\\\\ht\\\\5cb70dc_b1f3c24_1c0bc041\\\\lib\\\\site-packages\\\\robocorp\\\\log\\\\_robo_output_impl.py', line 773, code _dump_threads>, 769)]"
+TBV gL|ah|gM
+ETD 41.061
+EPS 41.061
+ET j|e|41.082
+ER j|41.082
